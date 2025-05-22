@@ -211,4 +211,4 @@ The **Power BI dashboard** is titled **Overall Business Performance** and visual
 - A **bar chart of the top 10 most sold product categories**, derived from Business Question 4.
 - A **donut chart showing revenue by payment method**, tied to Business Question 13.
 
-![Dashboard](images/dashboard_screenshot.png)
+![Dashboard](images/dashboard_screenshot.PNG)
