@@ -647,11 +647,11 @@ WHERE product_id IN (
     WHERE product_category_name IS NULL
 );
 
--- Those 610 products don't have a match in the table product_category_name_translation
+-- Those 610 products don't have a product category name
 SELECT *
 FROM dbo.olist_products_dataset p
 LEFT JOIN dbo.product_category_name_translation t ON t.product_category_name = p.product_category_name
-WHERE p.product_category_name IS NULL
+WHERE p.product_category_name IS NULL;
 
 /* Finding similar product with same content metadata to possibly impute dimensions:
 - product_id = '09ff539a621711667c43eba6a3bd8466'
