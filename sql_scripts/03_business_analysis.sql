@@ -49,7 +49,7 @@ SELECT *
 FROM dbo.olist_orders_dataset
 WHERE order_id = 'bfbd0f9bdef84302105ad712db648a6c'; -- that order was delivered
 
--- Total revenue: R$ 15,421,083
+-- Total revenue: R$15,421,083
 SELECT 
 	ROUND(SUM(p.payment_value), 0) total_revenue
 FROM dbo.olist_order_payments_dataset p 
@@ -249,7 +249,7 @@ WHERE p.product_id IS NULL;
 
 -- Finding that product: there are 17 purchases of that product
 -- product_id = '5eb564652db742ff8f28759cd8d2652a'
--- Two price points observed: R$ 29 and R$ 39
+-- Two price points observed: R$29 and R$39
 SELECT
 	*
 FROM dbo.olist_order_items_dataset oi 
@@ -336,7 +336,7 @@ What is the average order value (AOV) on Olist, and how does this vary by produc
 ===============================================================================
 */
 
--- AOV = R$ 160
+-- AOV = R$160
 WITH base_payment_orders AS (
 	SELECT
 		o.order_id AS order_id,
@@ -572,7 +572,7 @@ WITH return_customers AS (
 SELECT COUNT(number_purchases) AS total_return_customers
 FROM return_customers;
 
--- Revenue of return customers: R$ 86,4357
+-- Revenue of return customers: R$86,4357
 WITH return_customers AS (
 	SELECT 
 		customer_unique_id,
