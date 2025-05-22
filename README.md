@@ -181,6 +181,7 @@ Discrepancy: **R$2,831.48** (just 0.02%)
 This shows **almost perfect alignment**.
 
 **Q15: Calculate customer retention rate according to geolocations**
+
 Top 5 states by customer retention:
 1. Acre
 2. Rondônia
