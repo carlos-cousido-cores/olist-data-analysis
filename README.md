@@ -110,7 +110,6 @@ The top 5 categories by sales volume are:
 4. Furniture Decor  
 5. Computers Accessories 
 
-
 **Q5: What are the top-selling products on Olist, and how have their sales trends changed over time?**  
 Top 3 categories by revenue overall are:
 1. Health Beauty  
@@ -163,7 +162,6 @@ The average customer rating is **4.0**. High-revenue categories such as Health B
 **Q11: What is the average and monthly trend of 5-star review rates?**  
 On average, **60.32% of reviews** are 5-star. This percentage remains **stable over time**.
 
-
 **Q12: What is the average order cancellation rate on Olist, and how does this impact seller performance?**  
 The order cancellation rate is low at **0.63%**, well within acceptable industry standards (e.g., Amazon’s target is under 2.5%). 
 This indicates strong seller compliance and a healthy order fulfillment process.
@@ -177,9 +175,9 @@ They are especially:
 - Commonly used for top-selling categories such as Bed Bath Table, Health Beauty, Sports Leisure, Furniture Decoration, and Computer Accessories
 
 **Q14: How accurately do item prices and freight values reflect the actual payment amounts received from customers, and what is the average discrepancy?**  
-Expected revenue: **R$ 15,418,251.37**  
-Actual revenue: **R$ 15,421,082.85**  
-Discrepancy: **R $2,831.48** (just 0.02%)  
+Expected revenue: **R$15,418,251.37**  
+Actual revenue: **R$15,421,082.85**  
+Discrepancy: **R$2,831.48** (just 0.02%)  
 This shows **almost perfect alignment**.
 
 **Q15: Calculate customer retention rate according to geolocations**
