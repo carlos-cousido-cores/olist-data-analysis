@@ -16,8 +16,8 @@ This project analyzes real commercial data from the Olist Store, an online retai
 
 ## 1. Data Source
 
-The dataset used in this project is publicly available on Kaggle:  
-**[Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)**
+The dataset used in this project is publicly available on Kaggle:
+<a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank"><strong>Brazilian E-Commerce Public Dataset by Olist</strong></a>  
 
 ---
 
