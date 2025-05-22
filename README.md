@@ -111,7 +111,7 @@ The top 5 categories by sales volume are:
 5. Computers Accessories 
 
 **Q5: What are the top-selling products on Olist, and how have their sales trends changed over time?**  
-Top 3 categories by revenue overall are:
+The top 3 categories by revenue overall are:
 1. Health Beauty  
 2. Watches Gifts  
 3. Bed Bath Table 
@@ -180,7 +180,7 @@ Actual revenue: **R$15,421,082.85**
 Discrepancy: **R$2,831.48** (just 0.02%)  
 This shows **almost perfect alignment**.
 
-**Q15: Calculate customer retention rate according to geolocations**
+**Q15: Calculate customer retention rate according to geolocations**                                                                                            
 The top 5 states by customer retention are:
 1. Acre
 2. Rondônia
