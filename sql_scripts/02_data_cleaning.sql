@@ -21,11 +21,11 @@ Purpose:
 WITH ranked_reviews AS (
 	SELECT *,
 		ROW_NUMBER() OVER(PARTITION BY order_id ORDER BY review_answer_timestamp DESC) AS rank_review
-	FROM dbo.olist_order_reviews_dataset
+	FROM olist_order_reviews_dataset
 )
 -- Create a new cleaned table with one review per order
 SELECT *
-INTO dbo.olist_order_reviews_dataset_clean
+INTO olist_order_reviews_dataset_clean
 FROM ranked_reviews
 WHERE rank_review = 1;
 
@@ -39,22 +39,23 @@ WHERE rank_review = 1;
 ============================================================================ */
 
 SELECT * 
-FROM dbo.product_category_name_translation
+FROM product_category_name_translation
 
 -- Rename columns
-EXEC sp_rename 'dbo.product_category_name_translation.column1', 'product_category_name', 'COLUMN'
-EXEC sp_rename 'dbo.product_category_name_translation.column2', 'product_category_name_english', 'COLUMN'
+EXEC sp_rename 'product_category_name_translation.column1', 'product_category_name', 'COLUMN'
+EXEC sp_rename 'product_category_name_translation.column2', 'product_category_name_english', 'COLUMN'
+GO
 
 -- Drop first row
-DELETE FROM dbo.product_category_name_translation 
+DELETE FROM product_category_name_translation 
 WHERE product_category_name = 'product_category_name' AND product_category_name_english = 'product_category_name_english'
 
 -- Create a new table and add the 3 missing categories
 SELECT *
-INTO dbo.product_category_name_translation_complete
-FROM dbo.product_category_name_translation;
+INTO product_category_name_translation_complete
+FROM product_category_name_translation;
 
-INSERT INTO dbo.product_category_name_translation_complete (product_category_name, product_category_name_english)
+INSERT INTO product_category_name_translation_complete (product_category_name, product_category_name_english)
 VALUES 
     ('pc_gamer', 'pc_gamer'),
     ('portateis_cozinha_e_preparadores_de_alimentos', 'kitchen_appliances_preparers'),
@@ -86,9 +87,9 @@ SELECT
   CASE WHEN product_id = '6fd08d44046ab994b96ff38ad6fcfba1' THEN 23 ELSE product_length_cm END AS product_length_cm,
   CASE WHEN product_id = '6fd08d44046ab994b96ff38ad6fcfba1' THEN 23 ELSE product_height_cm END AS product_height_cm,
   CASE WHEN product_id = '6fd08d44046ab994b96ff38ad6fcfba1' THEN 23 ELSE product_width_cm END AS product_width_cm
-INTO dbo.olist_products_dataset_clean
-FROM dbo.olist_products_dataset p
-LEFT JOIN dbo.product_category_name_translation_complete t ON p.product_category_name = t.product_category_name
+INTO olist_products_dataset_clean
+FROM olist_products_dataset p
+LEFT JOIN product_category_name_translation_complete t ON p.product_category_name = t.product_category_name
 WHERE NOT (
   p.product_category_name IS NULL AND
   p.product_name_lenght IS NULL AND
