@@ -67,7 +67,7 @@ FROM olist_order_payments_dataset p
 INNER JOIN olist_orders_dataset o ON p.order_id = o.order_id
 WHERE o.order_status != 'canceled' AND 
 	  o.order_delivered_customer_date IS NOT NULL
-GROUP BY DATEPART (QUARTER, o.order_purchase_timestamp), YEAR(o.order_purchase_timestamp)
+GROUP BY DATEPART (quarter, o.order_purchase_timestamp), YEAR(o.order_purchase_timestamp)
 ORDER BY year, quarter;
 
 -- Monthly revenue shows an overall ascending trend
@@ -462,13 +462,13 @@ recent_seller_gap AS (
 )
 SELECT
     YEAR(last_order_date) AS year,
-    DATEPART(QUARTER, last_order_date) AS quarter,
+    DATEPART(quarter, last_order_date) AS quarter,
     MONTH(last_order_date) AS month,
     COUNT(seller_id) AS active_seller_order_count
 FROM recent_seller_gap
 GROUP BY
     YEAR(last_order_date),
-    DATEPART(QUARTER, last_order_date),
+    DATEPART(quarter, last_order_date),
     MONTH(last_order_date)
 ORDER BY
     year, quarter, month;
